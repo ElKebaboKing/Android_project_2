@@ -46,28 +46,100 @@
                 android:text="0" />
 
             <!-- 3 points button -->
-            <Button
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/button_height"
                 android:layout_margin="8dp"
-                android:onClick="addThreeForTeamA"
-                android:text="+3 Points" />
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:clickable="true">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageView
+                    android:id="@+id/middle_ball_3_pointA"
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toRightOf="@id/middle_ball_3_pointA"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toLeftOf="@id/middle_ball_3_pointA"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
 
             <!-- 2 points button -->
-            <Button
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/button_height"
                 android:layout_margin="8dp"
-                android:onClick="addTwoForTeamA"
-                android:text="+2 Points" />
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom">
+
+                <ImageView
+                    android:id="@+id/middle_ball_2_pointA"
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toRightOf="@id/middle_ball_2_pointA"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toLeftOf="@id/middle_ball_2_pointA"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
 
             <!-- 1 point button -->
-            <Button
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/button_height"
                 android:layout_margin="8dp"
-                android:onClick="addOneForTeamA"
-                android:text="Free Throw" />
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
