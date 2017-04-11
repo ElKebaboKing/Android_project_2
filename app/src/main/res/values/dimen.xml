@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="ball_width">16dp</dimen>
-    <dimen name="ball_height">16dp</dimen>
+    <dimen name="ball_width">20dp</dimen>
+    <dimen name="ball_height">20dp</dimen>
     <dimen name="button_padding_top">2dp</dimen>
     <dimen name="button_padding_bottom">2dp</dimen>
-    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_height">42dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
 </resources>

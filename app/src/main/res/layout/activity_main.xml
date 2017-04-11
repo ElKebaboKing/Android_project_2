@@ -49,17 +49,17 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/button_margin"
                 android:paddingTop="@dimen/button_padding_top"
                 android:paddingBottom="@dimen/button_padding_bottom"
-                android:clickable="true">
+                android:clickable="true"
+                android:onClick="addThreeForTeamA">
 
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
-                    android:background="@android:color/darker_gray"/>
+                    android:background="@color/button_color"/>
 
                 <ImageView
                     android:id="@+id/middle_ball_3_pointA"
@@ -86,9 +86,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/button_margin"
                 android:paddingTop="@dimen/button_padding_top"
-                android:paddingBottom="@dimen/button_padding_bottom">
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:onClick="addTwoForTeamA">
 
                 <ImageView
                     android:id="@+id/middle_ball_2_pointA"
@@ -101,7 +102,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"/>
+                android:background="@color/button_color"/>
 
 
                 <ImageView
@@ -122,15 +123,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/button_margin"
                 android:paddingTop="@dimen/button_padding_top"
-                android:paddingBottom="@dimen/button_padding_bottom">
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:onClick="addOneForTeamA">
 
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@android:color/darker_gray"/>
+                    android:background="@color/button_color"/>
 
                 <ImageView
                     android:layout_width="@dimen/ball_width"
@@ -178,26 +180,104 @@
                 android:textColor="#000000"
                 android:text="0" />
 
-            <Button
+            <!-- 3 points button -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:onClick="addThreeForTeamB"
-                android:text="+3 Points" />
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/button_margin"
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:clickable="true"
+                android:onClick="addThreeForTeamB">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:onClick="addTwoForTeamB"
-                android:text="+2 Points" />
 
-            <Button
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageView
+                    android:id="@+id/middle_ball_3_pointB"
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toRightOf="@id/middle_ball_3_pointB"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toLeftOf="@id/middle_ball_3_pointB"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <!-- 2 points button -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:onClick="addOneForTeamB"
-                android:text="Free Throw" />
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/button_margin"
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:onClick="addTwoForTeamB">
+
+                <ImageView
+                    android:id="@+id/middle_ball_2_pointB"
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toRightOf="@id/middle_ball_2_pointB"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_toLeftOf="@id/middle_ball_2_pointB"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <!-- 1 point button -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/button_margin"
+                android:paddingTop="@dimen/button_padding_top"
+                android:paddingBottom="@dimen/button_padding_bottom"
+                android:onClick="addOneForTeamB">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageView
+                    android:layout_width="@dimen/ball_width"
+                    android:layout_height="@dimen/ball_height"
+                    android:src="@drawable/basketball"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -209,6 +289,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <!-- Reset button -->
             <Button
                 android:layout_width="wrap_content"
